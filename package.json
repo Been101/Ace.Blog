@@ -1,0 +1,33 @@
+{
+  "name": "ace.blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "release": "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Been101/Ace.Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Been101/Ace.Blog/issues"
+  },
+  "homepage": "https://github.com/Been101/Ace.Blog#readme",
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.1.0",
+    "husky": "^3.0.4",
+    "standard-version": "^7.0.0"
+  }
+}
