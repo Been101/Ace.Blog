@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "commitmsg": "commitlint -E GIT_PARAMS",
-    "release": "standard-version"
+    "release": "standard-version",
+    "commit": "git-cz"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -27,7 +26,13 @@
   "devDependencies": {
     "commitizen": "^4.0.3",
     "commitlint": "^8.1.0",
+    "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.4",
     "standard-version": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
