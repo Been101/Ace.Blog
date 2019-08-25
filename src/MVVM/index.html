@@ -9,20 +9,35 @@
 </head>
 
 <body>
+    <div id="app">
+        <p>{{name}}</p>
+        <p a-text = 'name'></p>
+        <p>{{age}}</p>
+        <input type="text" a-model = 'age'>
+        <button @click = 'changeName'>事件</button>
+        <p a-html = 'changeName'></p>
+    </div>
+    <script src="./Compile.js"></script>
     <script src="./Ace.js"></script>
     <script>
         const app = new Ace({
             data: {
                 name: 'jerry',
-                age: {
-                    ss: 'jiek'
+                age: 44
+            },
+            created() {
+                console.log('开始啦')
+                setTimeout(() => {
+                    this.name = '测试name'
+                }, 1500)
+            },
+            methods: {
+                changeName(){
+                    this.name = 'hello methods'
                 }
             }
         })
-        console.log(app)
-
-        app.$data.name = 'change'
-        app.$data.age.ss = 'change jj'
+        
     </script>
 </body>
 
