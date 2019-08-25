@@ -15,7 +15,7 @@ class Ace{
         // 测试代码 end
 
         // 使用compiler
-        new Compile(options.el, this)
+        new Compiler(options.el, this)
 
         // created执行
         if(options.created){
