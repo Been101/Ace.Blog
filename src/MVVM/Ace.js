@@ -6,13 +6,22 @@ class Ace{
         this.$data = options.data
         this.observe(this.$data)
         // 测试代码 start
-        new Watcher() //
-        console.log(Dep.target)
-        this.$data.name; // 读一下属性,  执行get, 加入subs
-        new Watcher() //
-        console.log(Dep.target)
-        this.$data.age; // 读一下属性,  执行get, 加入subs
+        // new Watcher() //
+        // console.log(Dep.target)
+        // this.$data.name; // 读一下属性,  执行get, 加入subs
+        // new Watcher() //
+        // console.log(Dep.target)
+        // this.$data.age; // 读一下属性,  执行get, 加入subs
         // 测试代码 end
+
+        // 使用compiler
+        new Compile(options.el, this)
+
+        // created执行
+        if(options.created){
+            options.created.call(this)
+        }
+        
     }
 
     observe(data) {
@@ -21,6 +30,9 @@ class Ace{
         }
         Object.keys(data).forEach(key => {
             this.defineReactive(data, key, data[key])
+
+            // 代理data中的属性到vue 实例上
+            this.proxyData(key)
         });
     }
 
@@ -42,29 +54,47 @@ class Ace{
             }
         })
     }
+
+    proxyData(key) {
+        Object.defineProperty(this, key, {
+            get() {
+                return this.$data[key]
+            },
+            set(val) {
+                this.$data[key] = val
+            }
+        })
+    }
 }
 
 class Dep{
     constructor() {
         // 这里存放若干 依赖(watcher) 一个属性生成一个dep
-        this.subs = []
+        this.deps = []
     }
     addDep(dep){
-        this.subs.push(dep)
+        this.deps.push(dep)
     }
 
     notify() {
-        this.subs.forEach(dep => dep.update())
+        this.deps.forEach(dep => dep.update())
     }
 }
 
 class Watcher{
-    constructor() {
+    constructor(vm, key, cb) {
+        console.log(vm, '<---')
+        this.vm = vm
+        this.key = key
+        this.cb = cb
         Dep.target = this // hack 操作，把watcher  实例赋给Dep.target 以方便后面加入subs
+        this.vm[this.key]
+        Dep.target = null
     }
     update() {
         console.log('属性更新了')
+        console.log(this.vm)
+        console.log(this.key)
+        this.cb.call(this.vm, this.vm[this.key])
     }
 }
-
-class Compile {}
