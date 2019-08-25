@@ -1,0 +1,13 @@
+.main{
+    display: flex;
+}
+
+.nav{
+    width: 150px;
+}
+.nav li{
+    cursor: pointer;
+}
+.context{
+    flex: 1;
+}
