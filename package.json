@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "release": "standard-version",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "blog": "hexo init blog && cd blog",
+    "start": "hexo server"
   },
   "husky": {
     "hooks": {
@@ -34,5 +36,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "hexo-cli": "^2.0.0",
+    "koa": "^2.8.1",
+    "koa-router": "^7.4.0"
   }
 }

@@ -16,8 +16,8 @@ fetch(ISSUSES_URL).then(data => {return data.json()}).then(issues => {
 function getIssue(id) {
     const ISSUSE_URL = `${ISSUSES_URL}/${id}`
     fetch(ISSUSE_URL).then(data => {return data.json()}).then(issue => {
-    md2html(issue.body)
-})
+        md2html(issue.body)
+    })
 }
 
 function md2html(MD_TEXT) {
