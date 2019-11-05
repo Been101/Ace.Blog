@@ -7,7 +7,9 @@
     "release": "standard-version",
     "commit": "git-cz",
     "blog": "hexo init blog && cd blog",
-    "start": "hexo server"
+    "start": "hexo server",
+    "dev": "vuepress dev src/docs ",
+    "build": "vuepress build src/docs"
   },
   "husky": {
     "hooks": {
@@ -25,13 +27,6 @@
     "url": "https://github.com/Been101/Ace.Blog/issues"
   },
   "homepage": "https://github.com/Been101/Ace.Blog#readme",
-  "devDependencies": {
-    "commitizen": "^4.0.3",
-    "commitlint": "^8.1.0",
-    "cz-conventional-changelog": "^3.0.2",
-    "husky": "^3.0.4",
-    "standard-version": "^7.0.0"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -42,5 +37,13 @@
     "hexo-cli": "^2.0.0",
     "koa": "^2.8.1",
     "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.1.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.4",
+    "standard-version": "^7.0.0",
+    "vuepress": "^1.2.0"
   }
 }
