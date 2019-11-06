@@ -1,8 +1,8 @@
 module.exports = {
   base: '/ace-blog/',
   dest: 'dist',
-  title: '@Ace Blog',
-  description: 'front end blog',
+  title: 'Ace',
+  description: 'ace blog',
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -16,7 +16,7 @@ module.exports = {
   ],
   serviceWorker: false,
   themeConfig: {
-    repo: '',
+    repo: 'Been101/Ace.Blog',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
@@ -24,17 +24,18 @@ module.exports = {
     nav: [
       {
         text: 'vue',
-        link: '/vue/SSR/'
+        items: [
+          { text: 'SSR', link: '/vue/SSR/' },
+        ]
       }
     ],
     sidebar: {
       '/vue/': [
         {
-          title: 'SSR 服务端渲染',
+          title: 'SSR',
           collapsable: false,
           children: [
-            ['SSR/', 'SSR'],
-            'SSR/SSR'
+            ['SSR/', 'Introduction']
           ]
         }
       ]
