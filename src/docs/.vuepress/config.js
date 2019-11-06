@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/ace-blog/',
+  base: '/',
   dest: 'dist',
   title: 'Ace',
   description: 'ace blog',
