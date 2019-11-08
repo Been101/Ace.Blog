@@ -23,6 +23,10 @@ module.exports = {
     lastUpdated: '上次更新',
     nav: [
       {
+        text: 'nav',
+        link: '/nav/index/'
+      },
+      {
         text: 'vue',
         items: [
           { text: 'SSR', link: '/vue/SSR/' },
