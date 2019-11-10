@@ -23,15 +23,37 @@ module.exports = {
     lastUpdated: '上次更新',
     nav: [
       {
-        text: 'nav',
+        text: 'JS/TS',
         link: '/nav/index/'
       },
       {
-        text: 'vue',
+        text: 'React',
+        link: '/nav/index/'
+      },
+      {
+        text: 'Vue',
         items: [
           { text: 'SSR', link: '/vue/SSR/' },
         ]
-      }
+      },
+      {
+        text: 'Webpack',
+        items: [
+          { text: 'SSR', link: '/vue/SSR/' },
+        ]
+      },
+      {
+        text: 'Jenkins',
+        items: [
+          { text: 'SSR', link: '/vue/SSR/' },
+        ]
+      },
+      {
+        text: 'Charts',
+        items: [
+          { text: 'SSR', link: '/vue/SSR/' },
+        ]
+      },
     ],
     sidebar: {
       '/vue/': [
