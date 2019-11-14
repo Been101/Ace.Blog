@@ -18,13 +18,15 @@ module.exports = {
   themeConfig: {
     repo: 'Been101/Ace.Blog',
     editLinks: true,
-    docsDir: 'docs',
+    docsDir: 'src/docs',
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
     nav: [
       {
         text: 'JS/TS',
-        link: '/nav/index/'
+        items: [
+          { text: 'Axios', link: '/TS/Axios/' }
+        ]
       },
       {
         text: 'React',
@@ -62,6 +64,16 @@ module.exports = {
           collapsable: false,
           children: [
             ['SSR/', 'Introduction']
+          ]
+        }
+      ],
+      '/TS/': [
+        {
+          title: 'TS-Axios',
+          collapsable: false,
+          children: [
+            ['Axios/', 'ts-axios接口扩展'],
+            'Axios/interceptor'
           ]
         }
       ]
