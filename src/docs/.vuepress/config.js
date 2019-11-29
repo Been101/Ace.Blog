@@ -73,7 +73,11 @@ module.exports = {
           collapsable: false,
           children: [
             ['Axios/', 'ts-axios接口扩展'],
-            'Axios/interceptor'
+            'Axios/interceptor',
+            'Axios/config',
+            'Axios/customRequestAndResponse',
+            'Axios/create',
+            'Axios/cancel'
           ]
         }
       ]
