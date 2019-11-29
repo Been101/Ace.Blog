@@ -67,3 +67,97 @@
 接下来，就来实现这个 `CancelToken` 类，先来看一下接口定义:
 
 ### 接口定义
+
+`types/index.ts`
+
+```ts
+  export interface AxiosRequestConfig {
+    // ...
+    cancelToken?: CancelToken
+  }
+
+  export interface CancelToken {
+    promise: Promise<string>
+    reason?: string
+  }
+
+  export interface Canceler {
+    (message?: string): void
+  }
+
+  export interface CancelExecutor {
+    (cancel: Canceler): void
+  }
+```
+
+其中 `CancelToken` 是实例类型的接口定义， `Canceler` 是取消方法的接口定义， `CancelExecutor` 是 `CancelToken` 类构造函数参数的接口定义。
+
+### 代码实现
+
+```ts
+```
+## Cancel 类的实现及 axios 的扩展
+
+### 接口定义
+
+```ts
+  export interface Cancel {
+    message?: string
+  }
+
+  export interface CancelStatic {
+    new(message?: string): Cancel
+  }
+
+  export interface AxiosStatic extends AxiosInstance {
+    create(config?: AxiosRequestConfig): AxiosInstance
+
+    CancelToken: CancelTokenStatic
+    Cancel: CancelStatic
+    isCancel: (value: any) => boolean
+  }
+
+```
+其中 `Cancel` 是实例类型的接口定义，`CancelStatic` 是类类型的接口定义，并且我们给 `axios` 扩展了多个静态方法。
+
+### 代码实现
+
+`Cancel.ts`
+
+```ts
+```
+
+## 额外逻辑实现
+
+除此之外，我们还需要实现一些额外逻辑，比如当一个请求携带的 `cancelToken` 已经被使用过， 那么我们甚至都可以不发送这个请求，只需要抛出一个异常即可，并且抛异常的信息就是我们取消的原因，所以我们需要给 `CancelToken` 扩展一个方法。
+
+先修改定义部分
+
+`types/index.ts`
+
+```ts
+  export interface CancelToken {
+    promise: Promise<Cancel>
+    reason?: Cancel
+
+    throwIfRequested(): void
+  }
+```
+
+添加一个 `throwIfRequested` 方法，接下来实现它
+
+`cancel/CancelToken.ts`
+
+```ts
+  export default class CancelToken {
+    // ...
+
+    throwIfRequest(): void {
+      if(this.reason) {
+        throw this.reason
+      }
+    }
+  }
+```
+
+判断如果存在 `this.reason`，说明这个 `token` 已经被使用过，直接抛错。
