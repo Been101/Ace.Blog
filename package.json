@@ -9,7 +9,7 @@
     "blog": "hexo init blog && cd blog",
     "start": "hexo server",
     "dev": "vuepress dev src/docs ",
-    "build": "vuepress build src/docs"
+    "build": "vuepress build src/docs && node build.js"
   },
   "husky": {
     "hooks": {
@@ -42,6 +42,7 @@
   "devDependencies": {
     "commitizen": "^4.0.3",
     "commitlint": "^8.1.0",
+    "copy-dir": "^1.2.0",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.4",
     "standard-version": "^7.0.0",
