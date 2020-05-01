@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>proxy</title>
+</head>
+
+<body>
+  <script>
+    const data = {
+      list: []
+    }
+
+    const nameMap = {
+      a: '我是a, 今年 12 岁',
+      b: '我是b, 今年 14 岁',
+      c: '我是c, 今年 16 岁',
+    }
+
+    function say(name) {
+      console.log(nameMap[name])
+    }
+
+    Object.keys(data).forEach(key => {
+      console.log(data.list)
+      Object.defineProperty(data, key, {
+        enumerable: true,
+        configurable: true,
+        get() {
+          console.log(data)
+          // return data[key]
+        },
+        set(newValue) {
+          // console.log(newValue)
+          // say(newValue)
+        }
+      })
+    })
+
+    // data.name = 'a'
+    console.log(data.list)
+    setTimeout(() => {
+      // data.list.push('b')
+    }, 1000)
+
+    var obj = new Proxy({}, {
+      get: function (target, propKey, receiver) {
+        console.log(`getting ${propKey}!`, receiver);
+        return 22
+        // return Reflect.get(target, propKey, receiver);
+      },
+      set: function (target, propKey, value, receiver) {
+        console.log(`setting ${propKey}!`);
+        return Reflect.set(target, propKey, value, receiver);
+      }
+    });
+
+    console.log(obj.count)
+    //  setting count!
+    ++obj.count
+  </script>
+</body>
+
+</html>
