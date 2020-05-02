@@ -9,8 +9,8 @@
     "blog": "hexo init blog && cd blog",
     "start": "hexo server",
     "dev": "vuepress dev src/docs ",
-    "build": "vuepress build src/docs && node build.js",
-    "g": "git add . && npm run commit"
+    "build": "vuepress build src/docs && node build.js && npm run add",
+    "add": "git add . && npm run commit"
   },
   "husky": {
     "hooks": {

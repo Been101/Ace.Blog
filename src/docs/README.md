@@ -2,7 +2,7 @@
 home: true
 heroImage: 
 actionText: 快速上手 →
-actionLink: /DataStructure/
+actionLink: /DataStructure/DataStructure/
 features:
 - title: 算法至上
 - title: 原生至上
