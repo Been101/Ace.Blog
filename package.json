@@ -40,7 +40,7 @@
     "koa-static": "^5.0.0"
   },
   "devDependencies": {
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.0.5",
     "commitlint": "^8.1.0",
     "copy-dir": "^1.2.0",
     "cz-conventional-changelog": "^3.0.2",

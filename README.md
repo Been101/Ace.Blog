@@ -1,11 +1,11 @@
-# Ace.Blog
-
-## git moji
-    https://gitmoji.carloscuesta.me/ 
-    :zap:   Improving performance.
-    :pencil: Writing docs.
-    :fire: Removing code or files.
-    :art: Improving structure / format of the code.
-    :rocket: Deploying stuff.
-    :bug: Fixing a bug.
-    :lipstick: Updating the UI and style files.
+---
+home: true
+heroImage: 
+actionText: 快速上手 →
+actionLink: /DataStructure/
+features:
+- title: 算法至上
+- title: 原生至上
+- title: 源码至上
+footer: MIT Licensed | Copyright © 2020 Been
+---

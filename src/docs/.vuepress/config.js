@@ -29,44 +29,50 @@ module.exports = {
         ]
       },
       {
-        text: 'React',
-        link: '/nav/index/'
-      },
-      {
-        text: 'Vue',
+        text: '数据结构和算法',
         items: [
-          { text: 'SSR', link: '/vue/SSR/' },
-        ]
+              { text: 'DataStructure', link: '/DataStructure/DataStructure/' },
+            ]
       },
-      {
-        text: 'Webpack',
-        items: [
-          { text: 'SSR', link: '/vue/SSR/' },
-        ]
-      },
-      {
-        text: 'Jenkins',
-        items: [
-          { text: 'SSR', link: '/vue/SSR/' },
-        ]
-      },
-      {
-        text: 'Charts',
-        items: [
-          { text: 'SSR', link: '/vue/SSR/' },
-        ]
-      },
+      // {
+      //   text: 'React',
+      //   link: '/nav/index/'
+      // },
+      // {
+      //   text: 'Vue',
+      //   items: [
+      //     { text: 'SSR', link: '/vue/SSR/' },
+      //   ]
+      // },
+      // {
+      //   text: 'Webpack',
+      //   items: [
+      //     { text: 'SSR', link: '/vue/SSR/' },
+      //   ]
+      // },
+      // {
+      //   text: 'Jenkins',
+      //   items: [
+      //     { text: 'SSR', link: '/vue/SSR/' },
+      //   ]
+      // },
+      // {
+      //   text: 'Charts',
+      //   items: [
+      //     { text: 'SSR', link: '/vue/SSR/' },
+      //   ]
+      // },
     ],
     sidebar: {
-      '/vue/': [
-        {
-          title: 'SSR',
-          collapsable: false,
-          children: [
-            ['SSR/', 'Introduction']
-          ]
-        }
-      ],
+      // '/vue/': [
+      //   {
+      //     title: 'SSR',
+      //     collapsable: false,
+      //     children: [
+      //       ['SSR/', 'Introduction']
+      //     ]
+      //   }
+      // ],
       '/TS/': [
         {
           title: 'TS-Axios',
@@ -78,6 +84,17 @@ module.exports = {
             'Axios/customRequestAndResponse',
             'Axios/create',
             'Axios/cancel'
+          ]
+        }
+      ],
+      '/DataStructure/': [
+        {
+          title: '数据结构和算法',
+          collapsable: false,
+          children: [
+            ['DataStructure/', '介绍'],
+            'DataStructure/Stack',
+            'DataStructure/Queue',
           ]
         }
       ]
