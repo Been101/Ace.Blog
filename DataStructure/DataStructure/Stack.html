@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>栈 | Ace</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/Ace.Blog/logo.png">
+    <link rel="manifest" href="/Ace.Blog/manifest.json">
+    <link rel="apple-touch-icon" href="/Ace.Blog/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/Ace.Blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="ace blog">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/Ace.Blog/assets/css/0.styles.d44ed3c7.css" as="style"><link rel="preload" href="/Ace.Blog/assets/js/app.621f33e1.js" as="script"><link rel="preload" href="/Ace.Blog/assets/js/2.0968e3c9.js" as="script"><link rel="preload" href="/Ace.Blog/assets/js/6.5136140f.js" as="script"><link rel="prefetch" href="/Ace.Blog/assets/js/10.01b619aa.js"><link rel="prefetch" href="/Ace.Blog/assets/js/11.f237c036.js"><link rel="prefetch" href="/Ace.Blog/assets/js/12.e446602a.js"><link rel="prefetch" href="/Ace.Blog/assets/js/13.2c3e7f38.js"><link rel="prefetch" href="/Ace.Blog/assets/js/14.77b4cdc8.js"><link rel="prefetch" href="/Ace.Blog/assets/js/15.f41e0660.js"><link rel="prefetch" href="/Ace.Blog/assets/js/16.4f1fd6de.js"><link rel="prefetch" href="/Ace.Blog/assets/js/17.eeab45cd.js"><link rel="prefetch" href="/Ace.Blog/assets/js/18.9c417147.js"><link rel="prefetch" href="/Ace.Blog/assets/js/3.fc62896d.js"><link rel="prefetch" href="/Ace.Blog/assets/js/4.4d64059e.js"><link rel="prefetch" href="/Ace.Blog/assets/js/5.94e06c90.js"><link rel="prefetch" href="/Ace.Blog/assets/js/7.e55ddcae.js"><link rel="prefetch" href="/Ace.Blog/assets/js/8.b1d45dd4.js"><link rel="prefetch" href="/Ace.Blog/assets/js/9.f253f458.js">
+    <link rel="stylesheet" href="/Ace.Blog/assets/css/0.styles.d44ed3c7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Ace.Blog/" class="home-link router-link-active"><!----> <span class="site-name">Ace</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS/TS" class="dropdown-title"><span class="title">JS/TS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Ace.Blog/TS/Axios/" class="nav-link">
+  Axios
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据结构和算法" class="dropdown-title"><span class="title">数据结构和算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Ace.Blog/DataStructure/DataStructure/" class="nav-link router-link-active">
+  DataStructure
+</a></li></ul></div></div> <a href="https://github.com/Been101/Ace.Blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JS/TS" class="dropdown-title"><span class="title">JS/TS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Ace.Blog/TS/Axios/" class="nav-link">
+  Axios
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据结构和算法" class="dropdown-title"><span class="title">数据结构和算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Ace.Blog/DataStructure/DataStructure/" class="nav-link router-link-active">
+  DataStructure
+</a></li></ul></div></div> <a href="https://github.com/Been101/Ace.Blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>数据结构和算法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Ace.Blog/DataStructure/DataStructure/" class="sidebar-link">介绍</a></li><li><a href="/Ace.Blog/DataStructure/DataStructure/Stack.html" class="active sidebar-link">栈</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Ace.Blog/DataStructure/DataStructure/Stack.html#栈" class="sidebar-link">栈</a></li></ul></li><li><a href="/Ace.Blog/DataStructure/DataStructure/Queue.html" class="sidebar-link">队列</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="栈"><a href="#栈" class="header-anchor">#</a> 栈</h2> <p>栈是一种特殊的线性表， 仅能够在栈顶进行操作， 有着先进后出的特性。</p> <p><img src="https://user-gold-cdn.xitu.io/2020/4/20/171981f64fc98912" alt=""></p> <h3 id="栈的简单实现"><a href="#栈的简单实现" class="header-anchor">#</a> 栈的简单实现</h3> <ul><li>实现栈可以有两种方式，一种是以数组做基础；一种是以链表做基础。</li> <li>栈的方法
+<ul><li>push (添加一个元素到栈顶)</li> <li>pop (弹出栈顶元素)</li> <li>top (返回栈顶元素， 注意不是弹出)</li> <li>isEmpty (判断栈是否为空)</li> <li>size (返回栈里元素的个数)</li> <li>clear (清空栈)</li></ul></li></ul> <p><a href="https://github.com/Been101/data-structure/blob/master/Stack/Stack.js" target="_blank" rel="noopener noreferrer">以数组为基础的完整代码实现<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>function Stack {
+    var items = []
+    this.push = function (item) {
+        items.push(item)
+    }
+    this.pop = function() {
+        return items.pop()
+    }
+    this.top = function() {
+        return items[items.length - 1]
+    }
+    this.isEmpty = function() {
+        return !items.length
+    }
+    this.size = function () {
+        return items.length
+    }
+    this.clear = function() {
+        items = []
+    }
+}
+</code></pre></div><h3 id="应用练习"><a href="#应用练习" class="header-anchor">#</a> 应用练习</h3> <ol><li>编写一个函数判断字符串中的括号是否合法, 所谓合法，就是括号成对出现。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>sff()sf(sasfa)sfa(sdfsfd(sf))   合法
+((asf)sf(af)fa)                 合法
+)(sfa)f                         不合法
+(saf))fafa(sss()                不合法
+</code></pre></div><p>思路分析：</p> <ul><li>for循环遍历字符串每一个字符</li> <li>遇到左括号(, 就把左括号压入栈中</li> <li>遇到右括号，判断栈是否为空， 为空说明没有左括号与之对应， 缺少左括号， 字符串括号不合法，如果栈不为空，则把栈顶元素弹出，这对括号抵消掉</li> <li>for 循环结束之后， 如果栈是空的， 说明左右括号抵消掉了，字符串合法。如果栈里还有元素，则说明缺少右括号，字符串不合法</li></ul> <p><code>代码实现</code></p> <div class="language- extra-class"><pre class="language-text"><code>function is_leagl_brackets(str) {
+    let stack = new Stack()
+    for(let i = 0; i &lt; str.length; i++) {
+        const item = str[i]
+        if(item === '(') {
+            stack.push(item)
+        }
+        if(item === ')') {
+            if(stack.isEmpty()) {
+                return false
+            }else {
+                stack.pop()
+            }
+        }
+    }
+    
+    return stack.isEmpty()
+}
+</code></pre></div><ol start="2"><li>逆波兰表达式</li></ol> <p>也叫后缀表达式，它将复杂表达式转换为可以依靠简单的操作得到计算结果的表达式， 例如 (a + b) * (c + d) 转换为a b + c d + *</p> <div class="language- extra-class"><pre class="language-text"><code>[&quot;4&quot;, &quot;13&quot;, &quot;5&quot;, &quot;/&quot;, &quot;+&quot;] 等价于(4 + (13 / 5)) = 6
+[&quot;10&quot;, &quot;6&quot;, &quot;9&quot;, &quot;3&quot;, &quot;+&quot;, &quot;-11&quot;, &quot;*&quot;, &quot;/&quot;, &quot;*&quot;, &quot;17&quot;, &quot;+&quot;, &quot;5&quot;, &quot;+&quot;] 等价于((10 *	
+(6/((9 + 3) * -11 ))) + 17) + 5
+</code></pre></div><p>思路：</p> <p>for 循环遍历数组，对每一个元素做如下操作</p> <ul><li>如果元素不是 + - * / 中某一个，直接压入栈。</li> <li>如果是 + - / *中的一个，则连续弹出两个元素，并对这两个元素进行计算，且第一元素在运算符右侧， 第二个在运算符左侧，并把计算结果压入栈。</li></ul> <p>for 循环结束后， 栈里只有一个元素， 则这个元素就是整个表达式的计算结果。</p> <p><code>代码实现</code></p> <div class="language- extra-class"><pre class="language-text"><code>const operators = ['+', '-', '*', '/']
+function calc_exp(exp_arr){
+    const stack = new Stack()
+    for(let i = 0; i &lt; exp_arr.length; i++) {
+        const item = exp_arr[i]
+        if(operators.includes(item)) {
+            // 从栈顶弹出连个元素
+            const val1 = stack.pop()
+            const val2 = stack.pop()
+            // 拼成表达式
+            const str = val2 + item + val1
+            const result = parseInt(eval(str))
+            // 将计算结果转成字符串并压入栈
+            stack.push(result.toString())
+        }else {
+            stack.push(item)
+        }
+    }
+    // for 循环结束， 栈里只有一个元素， 就是最终的结果。
+    return stack.pop()
+}
+
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Been101/Ace.Blog/edit/master/src/docs/DataStructure/DataStructure/Stack.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/2/2020, 9:29:55 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Ace.Blog/DataStructure/DataStructure/" class="prev router-link-active">
+        介绍
+      </a></span> <span class="next"><a href="/Ace.Blog/DataStructure/DataStructure/Queue.html">
+        队列
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/Ace.Blog/assets/js/app.621f33e1.js" defer></script><script src="/Ace.Blog/assets/js/2.0968e3c9.js" defer></script><script src="/Ace.Blog/assets/js/6.5136140f.js" defer></script>
+  </body>
+</html>
