@@ -8,11 +8,30 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` }],
-    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    [
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+    ],
+    [
+      'link',
+      { rel: 'apple-touch-icon', href: `/icons/apple-touch-icon-152x152.png` },
+    ],
+    [
+      'link',
+      {
+        rel: 'mask-icon',
+        href: '/icons/safari-pinned-tab.svg',
+        color: '#3eaf7c',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'msapplication-TileImage',
+        content: '/icons/msapplication-icon-144x144.png',
+      },
+    ],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
   serviceWorker: false,
   themeConfig: {
@@ -24,15 +43,15 @@ module.exports = {
     nav: [
       {
         text: 'JS/TS',
-        items: [
-          { text: 'Axios', link: '/TS/Axios/' }
-        ]
+        items: [{ text: 'Axios', link: '/TS/Axios/' }],
       },
       {
         text: '数据结构和算法',
-        items: [
-              { text: 'DataStructure', link: '/DataStructure/DataStructure/' },
-            ]
+        link: '/DataStructure/DataStructure/',
+      },
+      {
+        text: 'UI 组件',
+        link: '/element/form/',
       },
       // {
       //   text: 'React',
@@ -83,9 +102,9 @@ module.exports = {
             'Axios/config',
             'Axios/customRequestAndResponse',
             'Axios/create',
-            'Axios/cancel'
-          ]
-        }
+            'Axios/cancel',
+          ],
+        },
       ],
       '/DataStructure/': [
         {
@@ -95,9 +114,16 @@ module.exports = {
             ['DataStructure/', '介绍'],
             'DataStructure/Stack',
             'DataStructure/Queue',
-          ]
-        }
-      ]
-    }
-  }
+          ],
+        },
+      ],
+      '/element/': [
+        {
+          title: 'UI 组件',
+          collapsable: false,
+          children: [['form/', 'Form表单']],
+        },
+      ],
+    },
+  },
 }
