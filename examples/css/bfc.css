@@ -1,0 +1,72 @@
+.wrap {
+  width: 200px;
+  border: 1px solid #333;
+}
+.wrap:after {
+  content: '';
+  display: block;
+  /* clear: both; */
+}
+.left {
+  float: left;
+  background: blue;
+  margin: 20px;
+  height: 100px;
+  width: 100px;
+}
+.right {
+  float: left;
+  background: red;
+  margin: 20px;
+  height: 50px;
+  width: 100px;
+}
+.wrap2 {
+  width: 200px;
+  border: 1px solid #333;
+}
+
+.left2 {
+  /* float: left; */
+  background: green;
+  margin: 20px;
+  height: 100px;
+  width: 100px;
+}
+.right2 {
+  /* float: left; */
+  background: greenyellow;
+  margin: 20px;
+  height: 50px;
+  width: 100px;
+}
+ul li {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid red;
+  width: 30px;
+  height: 30px;
+}
+
+body {
+  background: beige;
+}
+
+section {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 400px;
+  height: 160px;
+  padding: 30px 20px;
+  background: lightgray;
+}
+
+p {
+  position: absolute;
+  width: 50%;   /* == (400px + 20px + 20px) * .5 = 220px */
+  height: 25%;  /* == (160px + 30px + 30px) * .25 = 55px */
+  margin: 5%;   /* == (400px + 20px + 20px) * .05 = 22px */
+  padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
+  background: cyan;
+}
