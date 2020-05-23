@@ -114,28 +114,6 @@ el-form-item 中要显示的错误信息是由 el-form 的 rules 传入的，校
 `el-input.vue`
 
 ```diff
-<template>
-    <input :value = 'value' @input = 'Oninput'>
-</template>
-<script>
-export default {
-    data() {
-        return {
-            value: ''
-        }
-    },
-    methods: {
-        Oninput(e) {
-            this.$emit('input', e.target.value)
-        }
-    }
-}
-</script>
-```
-
-`el-input.vue`
-
-```diff
  Oninput(e) {
    this.$emit('input', e.target.value)
 +  this.$emit('validate', e.target.value) // 传入值并通知父元素可以校验啦
@@ -399,6 +377,62 @@ export default {
   }
 }
 
+```
+
+## 提交表单
+
+form 表单的正确使用姿势可能是这样的
+
+```html
+<template>
+  <div>
+    <el-form ref="form" :model="model" :rules="rules">
+      <el-form-item prop="name" label="用户名">
+        <el-input v-model="model.name"></el-input>
+      </el-form-item>
+      <el-form-item prop="password" label="密码">
+        <el-input v-model="model.password"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <button @click="checkForm">提交表单</button>
+      </el-form-item>
+    </el-form>
+  </div>
+</template>
+<script>
+  export default {
+    methods: {
+      checkForm() {
+        this.$refs.form.validate((valid: any) => {
+          if (valid) {
+            console.log('提交')
+          } else {
+            console.log('不能提交')
+          }
+        })
+      },
+    },
+  }
+</script>
+```
+
+提交表单需要主动校验所有规则， 需要给 form 添加 validate 方法。
+
+`el-form.vue`
+
+```js
+validate(cb) {
+  let flag = false
+  const tasks = this.$children.map(item => item.prop) // 排除掉不需要校验的组件
+  Promise.all(tasks).then(() => {
+    flag = true
+    cb(true)
+  }).catch(err => {
+     flag = false
+      cb(true)
+  })
+
+}
 ```
 
 ## [完整的代码](https://github.com/Been101/blog-examples/tree/master/src/components/Form)
